@@ -1,0 +1,46 @@
+{
+  "name": "nytreact",
+  "version": "1.0.0",
+  "description": "Keeping up with The New York Times news",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joe-fuentes/nytreact.git"
+  },
+  "keywords": [
+    "news",
+    "new",
+    "york",
+    "times"
+  ],
+  "author": "Joe Fuentes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joe-fuentes/nytreact/issues"
+  },
+  "homepage": "https://github.com/joe-fuentes/nytreact#readme",
+  "dependencies": {
+    "axios": "^0.17.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "colors": "^1.1.2",
+    "express": "^4.16.2",
+    "json-loader": "^0.5.7",
+    "moment": "^2.19.1",
+    "mongoose": "^4.13.1",
+    "morgan": "^1.9.0",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "request": "^2.83.0",
+    "webpack": "^3.8.1"
+  }
+}
