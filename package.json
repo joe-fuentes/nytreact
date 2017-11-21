@@ -1,39 +1,28 @@
 {
-  "name": "week19_nytreact",
+  "name": "mern",
   "version": "1.0.0",
-  "description": "react.js based application for searching New York Times",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brigmanlp/week19_nytreact.git"
-  },
-  "author": "brigmanlp",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brigmanlp/week19_nytreact/issues"
-  },
-  "homepage": "https://github.com/brigmanlp/week19_nytreact#readme",
-  "dependencies": {
-    "axios": "^0.12.0",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "lodash.isequal": "^4.4.0",
-    "mongoose": "^4.5.1",
-    "morgan": "^1.7.0",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-router": "^2.4.1",
-    "request": "^2.79.0"
-  },
   "devDependencies": {
-    "babel-core": "^6.3.13",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "webpack": "^1.13.1"
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.13.4",
+    "morgan": "^1.9.0",
+    "request": "^2.83.0"
   }
 }

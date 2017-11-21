@@ -16,7 +16,7 @@ var Article = require('./models/Article');
 var app = express();
 
 // Set an initial port.
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 5000;
 
 // Run Morgan for Logging
 app.use(logger("dev"));
@@ -34,16 +34,9 @@ var dbURI = 'mongodb://localhost/nytarticles';
 
 
 if (process.env.NODE_ENV === 'production') {
-    dbURI= "mongodb://heroku_xfj05g0m:ujk02k8p0qu0mjd9id7bbf9k45@ds141098.mlab.com:41098/heroku_xfj05g0m";
+    dbURI= "mongodb://heroku_jsk6g7h5:2rqjeg7dkrr53anenlavc0mknk@ds115396.mlab.com:15396/heroku_jsk6g7h5";
 }
-/*
-if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
-} else {
-  // Database configuration with mongoose
-  mongoose.connect(dbURI);
-}
-*/
+
 mongoose.connect(dbURI);
 var db = mongoose.connection;
 
@@ -55,12 +48,6 @@ db.on("error", function(err) {
 db.once("open", function() {
   console.log("Mongoose connection successful.");
 });
-
-/* Alternate way to render / root route
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/public/index.html");
-});
-*/
 
 app.get("/", function(req, res) {
   res.render(index.html);
